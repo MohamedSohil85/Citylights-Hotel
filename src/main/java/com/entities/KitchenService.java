@@ -1,4 +1,9 @@
 package com.entities;
 
-public class KitchenService {
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class KitchenService extends PanacheEntity {
 }

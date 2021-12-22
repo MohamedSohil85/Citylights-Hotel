@@ -4,19 +4,18 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 import javax.persistence.Entity;
-import java.util.Date;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity
-@Getter
 @Setter
-@ToString
+@Getter
 @NoArgsConstructor
-public class Restaurant extends PanacheEntity {
-    private String name;
-    private Date OpenTime;
-    private Date closeTime;
-    private String location;
+public class Reviews extends PanacheEntity {
+    @OneToMany
+    private List<Guest>guests;
+    private int rating;
+    private String comments;
 }

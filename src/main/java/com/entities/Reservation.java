@@ -26,4 +26,6 @@ public class Reservation extends PanacheEntity {
     private Date checkIn;
     @JsonFormat(pattern = "dd/MM/yyyy")
     private Date checkOut;
+    private float price;
+    private Date reservationDate;
 }

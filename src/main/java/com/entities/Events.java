@@ -6,25 +6,25 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import java.util.Date;
 import java.util.List;
 
 @Entity
-@Getter
 @Setter
-@NoArgsConstructor
+@Getter
 @ToString
-public class Guest extends PanacheEntity {
-    private String lastName;
-    private String firstName;
-    private Date dateOfBirth;
-    private String phoneNumber;
-    private String email;
-    private String passNumber;
-    private String address;
+@NoArgsConstructor
+public class Events extends PanacheEntity {
+
+    private Date startTime;
+    private Date endTime;
+    private String location;
+    private float booking_price;
     @OneToMany
-    private List<Reservation> reservationList;
+    private List<Guest>guests;
+    private int capatcity;
+
 }
