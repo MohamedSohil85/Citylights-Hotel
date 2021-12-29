@@ -9,6 +9,7 @@ import lombok.ToString;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -19,12 +20,11 @@ import java.util.List;
 @NoArgsConstructor
 public class Events extends PanacheEntity {
 
-    private Date startTime;
-    private Date endTime;
-    private String location;
+    @OneToOne
+    private LocalDateTimes localDateTimes;
+    private int RoomNr;
     private float booking_price;
     @OneToMany
     private List<Guest>guests;
-    private int capatcity;
 
 }

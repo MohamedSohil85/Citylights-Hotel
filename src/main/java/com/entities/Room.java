@@ -3,10 +3,7 @@ package com.entities;
 import com.enumeration.RoomStatus;
 import com.enumeration.RoomStyle;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Entity;
 
@@ -14,6 +11,7 @@ import javax.persistence.Entity;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class Room extends PanacheEntity {
 

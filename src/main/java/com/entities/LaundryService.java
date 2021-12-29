@@ -18,7 +18,6 @@ public class LaundryService extends PanacheEntity {
     private Laundry laundry;
     @OneToOne
     private Staff staff;
-    private Date LaundryDate;
     private float price;
 
 }
