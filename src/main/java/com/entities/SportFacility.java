@@ -5,21 +5,20 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import java.util.Date;
 import java.util.List;
 
 @Entity
-@Setter
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class LaundryService extends PanacheEntity {
-    @OneToOne
-    private Laundry laundry;
-    @OneToMany
-    private List<Staff> staff;
-    private float price;
+public class SportFacility extends PanacheEntity {
 
+    @OneToMany
+    private List<Staff> staffList;
+    @OneToMany
+    private List<LocalDateTimes>localDateTimesList;
+    private String Location;
+    private String description;
 }

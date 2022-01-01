@@ -1,14 +1,21 @@
 package com.entities;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import java.util.Date;
+import java.util.List;
 
 @Entity
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Laundry extends PanacheEntity {
-
-    private Date laundry_open_time;
-    private Date laundry_close_time;
+     @OneToMany
+     private List<LocalDateTimes>localDateTimesList;
     private String laundry_details;
 }

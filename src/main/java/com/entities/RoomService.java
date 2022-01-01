@@ -1,18 +1,22 @@
 package com.entities;
 
 import com.enumeration.MealType;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
 public class RoomService extends PanacheEntity {
     @ManyToOne
     private Staff staff;
-    private Date serviceDate;
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm a")
+    private LocalDateTime serviceDate;
     @ManyToOne
     private Room room;
     private MealType mealType;
+    private double price;
 }

@@ -21,6 +21,8 @@ public class Hotel extends PanacheEntity {
     private String phone;
     private String email;
     private String address;
+    @OneToOne
+    private Restaurant restaurant;
     @OneToMany
     private List<LocalDateTimes> reception;
     @OneToMany

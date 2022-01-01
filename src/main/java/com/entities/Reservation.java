@@ -8,6 +8,7 @@ import lombok.Setter;
 import lombok.ToString;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import java.util.Date;
 
 @Entity
@@ -16,6 +17,7 @@ import java.util.Date;
 @NoArgsConstructor
 @ToString
 public class Reservation extends PanacheEntity {
+
     @ManyToOne
     private Guest guest;
     @ManyToOne
@@ -26,6 +28,10 @@ public class Reservation extends PanacheEntity {
     private Date checkIn;
     @JsonFormat(pattern = "dd/MM/yyyy")
     private Date checkOut;
-    private float price;
+    @OneToOne
+    private RoomService roomService;
+    @OneToOne
+    private SportReservation sportReservation;
+    private float totalPrice;
     private Date reservationDate;
 }
