@@ -33,5 +33,6 @@ public class Reservation extends PanacheEntity {
     @OneToOne
     private SportReservation sportReservation;
     private float totalPrice;
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private Date reservationDate;
 }

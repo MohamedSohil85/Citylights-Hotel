@@ -1,5 +1,7 @@
 package com.entities;
 
+
+import com.enumeration.RoomConfiguration;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,6 +26,9 @@ public class Events extends PanacheEntity {
     private LocalDateTimes localDateTimes;
     private int RoomNr;
     private float booking_price;
+    private int capacity;
+    private int size;
+    private RoomConfiguration roomConfiguration;
     @OneToMany
     private List<Guest>guests;
 

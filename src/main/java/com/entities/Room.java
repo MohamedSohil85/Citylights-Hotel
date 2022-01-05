@@ -19,6 +19,7 @@ public class Room extends PanacheEntity {
     private double bookingPrice;
     private RoomStatus roomStatus;
     private RoomStyle roomStyle;
+    private String details;
     private boolean isSmoking;
 
 }

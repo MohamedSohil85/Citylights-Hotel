@@ -1,5 +1,6 @@
 package com.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ public class RestaurantBooking extends PanacheEntity {
     private Restaurant restaurant;
     @ManyToOne
     private Guest guest;
+    @JsonFormat(pattern = "dd/MM/yyyy HH:MM a")
     private Date bookingDate;
     private double price;
     private int tableNr;

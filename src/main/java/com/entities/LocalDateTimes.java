@@ -20,7 +20,7 @@ public class LocalDateTimes extends PanacheEntity {
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate reception_OpeningDate;
     @JsonFormat(pattern = "dd/MM/yyyy")
-    private Date reception_CloseDate;
+    private LocalDate reception_CloseDate;
     @JsonFormat(pattern = "hh:mm a")
     private LocalTime open_time;
     @JsonFormat(pattern = "hh:mm a")
