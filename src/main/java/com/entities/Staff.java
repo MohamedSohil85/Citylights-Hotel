@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-
+@User
 public class Staff extends PanacheEntity {
 
     private String lastName;

@@ -6,6 +6,7 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -17,6 +18,8 @@ public class RoomService extends PanacheEntity {
     private LocalDateTime serviceDate;
     @ManyToOne
     private Room room;
+    @OneToOne
+    private Menu menu;
     private MealType mealType;
     private double price;
 }
