@@ -6,6 +6,8 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
 @Entity
 @Getter
@@ -17,7 +19,9 @@ public class Room extends PanacheEntity {
 
     private int roomNumber;
     private double bookingPrice;
+    @Enumerated(EnumType.STRING)
     private RoomStatus roomStatus;
+    @Enumerated(EnumType.STRING)
     private RoomStyle roomStyle;
     private String details;
     private boolean isSmoking;

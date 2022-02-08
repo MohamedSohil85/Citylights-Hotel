@@ -15,7 +15,7 @@ public class HotelCreationDTO {
     private String name;
     private String phone;
     private String email;
-    private String website;
+    private String hotelService;
     private String address;
    private List<LocalDateTimes>localDateTimes;
 }

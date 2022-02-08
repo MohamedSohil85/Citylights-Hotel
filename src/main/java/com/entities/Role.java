@@ -16,7 +16,7 @@ import javax.persistence.ManyToOne;
 @AllArgsConstructor
 public class Role extends PanacheEntity {
 
-    @RolesValue
+
     private String roleName;
     @ManyToOne
     private Staff staff;

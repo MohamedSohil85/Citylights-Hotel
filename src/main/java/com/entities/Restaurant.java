@@ -8,6 +8,7 @@ import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import java.util.Date;
 import java.util.List;
 
@@ -17,8 +18,13 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 public class Restaurant extends PanacheEntity {
+
     private String name;
     @OneToMany
     private List<LocalDateTimes> localDateTimesList;
     private String location;
+    @OneToMany
+    private List<Staff>staffList;
+    @OneToOne
+    private Menu menu;
 }

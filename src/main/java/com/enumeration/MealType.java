@@ -1,5 +1,5 @@
 package com.enumeration;
 
 public enum MealType {
-    NoMeal,Breakfast,Lunch,Dinner,Full
+    NoMeal,Breakfast,Lunch,Dinner
 }

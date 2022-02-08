@@ -13,7 +13,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@User
+
+
 public class Staff extends PanacheEntity {
 
     private String lastName;
@@ -26,6 +27,5 @@ public class Staff extends PanacheEntity {
     private String username;
     private String password;
     @OneToMany
-    @Roles
     private List<Role> roleList;
 }
