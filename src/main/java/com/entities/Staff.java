@@ -1,6 +1,10 @@
 package com.entities;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import io.quarkus.security.jpa.Password;
+import io.quarkus.security.jpa.Roles;
+import io.quarkus.security.jpa.UserDefinition;
+import io.quarkus.security.jpa.Username;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -13,7 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-
+@UserDefinition
 
 public class Staff extends PanacheEntity {
 
@@ -24,8 +28,11 @@ public class Staff extends PanacheEntity {
     private String city;
     private String zip;
     private String street;
+    @Username
     private String username;
+    @Password
     private String password;
     @OneToMany
+    @Roles
     private List<Role> roleList;
 }

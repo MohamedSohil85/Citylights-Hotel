@@ -10,7 +10,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class StoreGuest {
+public class GetGuestInfos {
 
     private String lastName;
     private String firstName;
@@ -23,5 +23,4 @@ public class StoreGuest {
     private String city;
     private String zip;
     private String street;
-
 }
